@@ -2,15 +2,15 @@
 
 int main()
 {
-	int a,b;
+	int a, b;
 
 	a = 10;
 	b = a;
 
-	printf("a is %d, b is %d\n",a,b);
-	a++;
-	b--;
-	printf("a is %d, b is %d\n",a,b);
+	printf("a is %d, b is %d\n", ++a, --b);
+	// a++; // a = a + 1;
+	// b--; // b = b - 1;
+	printf("a is %d, b is %d\n", a, b);
 
-	return(0);
+	return (0);
 }
