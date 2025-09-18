@@ -4,7 +4,8 @@ int main()
 {
 	/* variable declarations */
 	int a, c;
-	float b;
+	float b; /* Variable b must be a float because
+	it is used in division*/
 	/* variable assignments */
 	a = 15;
 	b = a / 2.0; // You have to divide by 2.0 to get
