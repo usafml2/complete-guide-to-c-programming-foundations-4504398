@@ -7,7 +7,8 @@ int main()
 	for(a=1; a<=20; a++)
 	{
 		puts("Help! I'm trapped in the computer!");
+		
 	}
-
+  
 	return(0);
 }
