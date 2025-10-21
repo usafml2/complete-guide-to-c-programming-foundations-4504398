@@ -6,7 +6,7 @@ int main()
 
 	while(a <= 20)
 	{
-		if( a > 6 && a < 15 )
+		if( a >= 16 || a == 5 )
 			putchar('*');
 		printf("%d\n",a);
 		a++;
