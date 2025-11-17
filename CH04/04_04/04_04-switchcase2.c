@@ -14,12 +14,15 @@ int main()
 	switch(a)
 	{
 		case 'A':
+		case 'a':
 			puts("Delicious! A hearty snack.");
 			break;
 		case 'B':
+		case 'b':
 			puts("A family favorite!");
 			break;
 		case 'C':
+		case 'c':
 			puts("From a secret recipe.");
 			break;
 		default:
