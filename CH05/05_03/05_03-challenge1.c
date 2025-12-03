@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+void line(void);
+
+void line(void)
+{
+	printf("------------------------------\n");
+};
+
 int main()
 {
 	puts("How to Fight Off a Robot Attack");
