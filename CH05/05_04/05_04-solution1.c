@@ -5,6 +5,7 @@ void line(void)
 	int a;
 
 	for(a=0;a<40;a++)
+	  // printf("%d", a);
 		putchar('-');
 	putchar('\n');
 }
