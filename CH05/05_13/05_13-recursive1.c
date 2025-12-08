@@ -3,6 +3,8 @@
 void recurse(int a)
 {
 	a++;
+	if(a>10)
+	  return;
 	printf("%d\n",a);
 	recurse(a);
 }
