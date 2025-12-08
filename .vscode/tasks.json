@@ -1,4 +1,37 @@
 {
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run: CH05/05_11 arguments",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "gcc -g \"${workspaceFolder}/CH05/05_11/05_11-arguments1.c\" -o \"${workspaceFolder}/CH05/05_11/arguments\" && \"${workspaceFolder}/CH05/05_11/arguments\" ${input:runArgs}"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "runArgs",
+            "type": "promptString",
+            "description": "Arguments to pass to the program",
+            "default": "one two three"
+        }
+    ]
+}
+{
   "tasks": [
     {
       "type": "cppbuild",
