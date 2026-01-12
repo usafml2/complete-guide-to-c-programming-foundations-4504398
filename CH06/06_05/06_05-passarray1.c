@@ -17,6 +17,7 @@ int main()
 
 	incshow(text);
 	putchar('\n');
-
+  puts(text);
+	
 	return(0);
 }
