@@ -8,7 +8,7 @@ int main()
 		int year;
 	} birthday = { 2, 22, 1732 };
 
-	printf("George Watshington was born on %d/%d/%d\n",
+	printf("George Washington was born on %d/%d/%d.\n",
 			birthday.month,
 			birthday.day,
 			birthday.year
