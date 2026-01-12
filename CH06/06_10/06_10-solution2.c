@@ -13,9 +13,9 @@ int main()
 		char name[32];
 	};
 	struct person me = {
-		{ 10, 19, 1960 },
-		0.01829,
-		"Dan Gookin"
+		{ 9, 10, 1956 },
+		0.0018161,
+		"Chuck Watkins"
 	};
 
 	printf("%s was born on %d/%d/%d and is %f kilometers tall\n",
