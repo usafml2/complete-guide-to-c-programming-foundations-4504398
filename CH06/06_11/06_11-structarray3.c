@@ -2,7 +2,7 @@
 
 int main()
 {
-	struct pixel {
+	struct pixel { // Define a structure type and declare an array of structures
 		int horz;
 		int vert;
 		char color;
