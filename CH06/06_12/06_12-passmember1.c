@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-char *show_color(char c)
+char *show_color(char c) // Function to return color name based on character input. *show_color is defined before main
+// to avoid implicit declaration warning. * means the function returns a pointer to a char (string).
 {
 	switch(c)
 	{
@@ -17,11 +18,11 @@ char *show_color(char c)
 
 int main()
 {
-	struct pixel {
+	struct pixel { // Define a structure type named pixel
 		int horz;
 		int vert;
 		char color;
-	} center = { 320, 240, 'r' };
+	} center = { 320, 240, 'r' }; // Declare and initialize a variable of type pixel
 
 	printf("The pixel at %d,%d is colored %s\n",
 			center.horz,
