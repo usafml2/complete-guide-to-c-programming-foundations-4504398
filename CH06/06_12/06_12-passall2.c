@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-struct pixel {
+struct pixel { // Define a structure to represent a pixel
 	int horz;
 	int vert;
 	char color;
 };
 
-void show_pixel(struct pixel p)
+void show_pixel(struct pixel p) // Function to display pixel information.
+// Pixel is passed by value. p is a copy of center in main function.
 {
 	printf("Pixel found at %d,%d, color = ",
 			p.horz,
 			p.vert
 		  );
-	switch(p.color)
+	switch(p.color) 
 	{
 		case 'r':
 			puts("red");
@@ -30,9 +31,10 @@ void show_pixel(struct pixel p)
 
 int main()
 {
-	struct pixel center = { 320, 240, 'r' };
+	struct pixel center = { 320, 240, 'r' }; // Initialize a pixel structure. Pixel is red.
+	// Pass the structure to the function. Center is passed by value.
 
-	show_pixel(center);
+	show_pixel(center); // Call the function to show pixel information.
 
 	return(0);
 }
