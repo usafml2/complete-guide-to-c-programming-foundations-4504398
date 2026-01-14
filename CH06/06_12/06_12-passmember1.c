@@ -27,7 +27,7 @@ int main()
 	printf("The pixel at %d,%d is colored %s\n",
 			center.horz,
 			center.vert,
-			show_color(center.color)
+			show_color(center.color) // Call show_color with center.color as argument
 		  );
 
 	return(0);
