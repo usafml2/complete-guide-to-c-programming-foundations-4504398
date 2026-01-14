@@ -51,5 +51,6 @@ struct person fill(void) // function definition.
 void output(struct person y) // function definition. person is passed by value.
 // output function takes a struct person as argument. y is the parameter.
 {
-	printf("ID %d belongs to person %s\n", y.id, y.name);
+	printf("ID %d belongs to person %s\n", y.id, y.name); // print ID and name. y.id is 
+	// the ID member of the structure y, and y.name is the name member.
 }
