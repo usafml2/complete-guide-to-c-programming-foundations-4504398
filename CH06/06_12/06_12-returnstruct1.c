@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-struct pixel {
+struct pixel { // define a structure type
 	int horz;
 	int vert;
 	char color;
 };
 
-struct pixel screenmid(int h, int v)
+struct pixel screenmid(int h, int v) // returns a struct pixel. screenmid is function name.
 {
-	struct pixel c;
+	struct pixel c; // local variable. struct is type. pixel is name. c is variable.
 
 	c.horz = h/2;
 	c.vert = v/2;
