@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+struct pixel
+{
+	int horz;
+	int vert;
+	char color;
+} center = {320, 240, 'r'};
+
 void show_pixel(struct pixel p)
 {
 	printf("Pixel found at %d,%d, color = ",
@@ -22,13 +29,10 @@ void show_pixel(struct pixel p)
 	}
 }
 
+
 int main()
 {
-	struct pixel {
-		int horz;
-		int vert;
-		char color;
-	} center = { 320, 240, 'r' };
+	
 
 	show_pixel(center);
 
