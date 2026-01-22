@@ -8,7 +8,12 @@ int main()
 	float price = 78.66f;
 	float total = quantity * price;
 
-	printf("You have purchased %d %s at $%.2f each.\nThe total cost is %.2f\n", quantity, item, price, total);
+	printf("You have purchased %d %s at $%.2f each.\n",
+		quantity,
+		 item,
+		 price);
 
+	printf("The total cost is $%.2f\n", total);
+  	
 			return 0;
 }
