@@ -47,9 +47,10 @@ int main()
   }
 
   // Print the modified string
-  printf("Uppercase text: %s\n", input); // Output the modified string,
+  printf("Processing command: %s\n", input); // Output the modified string,
   // which is now in uppercase, to the user
-  printf("Your string length is: %zu characters long\n", length); // Print the length of the string using %zu format
+  printf("Your command string length is: %zu characters long\n", length); 
+  // Print the length of the string using %zu format
   // specifier for size_t
 
   return (0);
