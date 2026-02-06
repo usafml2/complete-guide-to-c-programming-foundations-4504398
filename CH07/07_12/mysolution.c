@@ -1,7 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+#include <stdio.h> // Include the standard input/output library for functions like printf and fgets
+#include <stdlib.h> // Include the standard library for functions like exit
+// (not used in this code but commonly included)
+#include <ctype.h> // Include the ctype library for character handling functions like toupper
+#include <string.h> // Include the string library for functions like strlen
 
 void remove_newline(char *input) // Function to remove the newline character from the input string.
 // The function takes a pointer to a character array (string) as an argument and modifies it in place.
