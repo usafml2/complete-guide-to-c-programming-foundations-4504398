@@ -27,7 +27,7 @@ int main()
 
   fgets(input, 160, stdin); // Fetch input from the user and store it in the 'input' variable,
   // ensuring it does not exceed 20 characters
-
+  
   remove_newline(input); // Call the function to remove the newline character from the input string
 
   // Get the length of the string
@@ -37,6 +37,10 @@ int main()
   for (size_t i = 0; i < length; i++) // Loop through each character in the string using its length
   // size_t is used here to ensure compatibility with the length type returned by strlen()
   {
+    if (strcmp(input, "QUIT\n") == 0) // Check if the input string is "QUIT\n"
+    {
+      break; // If it is, exit the loop and end the program
+    }
     // Convert the current character to uppercase using toupper()
     input[i] = toupper((unsigned char)input[i]); // Convert the character to uppercase
     // and store it back in the same position in the string
