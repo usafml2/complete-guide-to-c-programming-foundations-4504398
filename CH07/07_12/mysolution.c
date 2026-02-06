@@ -21,11 +21,11 @@ void remove_newline(char *input) // Function to remove the newline character fro
 int main()
 {
 
-  char input[20]; // Variable declaration for storing user input, with a maximum of 20 characters
+  char input[160]; // Variable declaration for storing user input, with a maximum of 20 characters
 
-  printf("Type some text, no more than 20 characters\n");// Prompt the user to enter some text
+  printf("Type some text, no more than 160 characters\n");// Prompt the user to enter some text
 
-  fgets(input, 20, stdin); // Fetch input from the user and store it in the 'input' variable,
+  fgets(input, 160, stdin); // Fetch input from the user and store it in the 'input' variable,
   // ensuring it does not exceed 20 characters
 
   remove_newline(input); // Call the function to remove the newline character from the input string
@@ -45,6 +45,8 @@ int main()
   // Print the modified string
   printf("Uppercase text: %s\n", input); // Output the modified string,
   // which is now in uppercase, to the user
+  printf("Your string length is: %zu characters long\n", length); // Print the length of the string using %zu format
+  // specifier for size_t
 
   return (0);
 }
