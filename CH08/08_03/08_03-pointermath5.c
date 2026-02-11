@@ -2,7 +2,7 @@
 
 int main()
 {
-	printf("Size of variable storage:\n");
+	printf("Size of variable storage in bytes:\n");
 	printf("char\t%lu\n",sizeof(char));
 	printf("int\t%lu\n",sizeof(int));
 	printf("float\t%lu\n",sizeof(float));
