@@ -23,7 +23,8 @@ int main()
 	// with a maximum of 31 characters (plus null terminator)
 	printf("Enter your age: ");
 	scanf("%d",&you.age); // read an integer from input and store it in you.age.
-	// Note: &you.age is the address of you.age, which is needed for scanf to store the input value.
+	// Note: &you.age is the address of you.age,
+	// which is needed for scanf to store the input value.
 
 	printf("You are %s",you.name);
 	printf("You are %d years old\n",you.age);
