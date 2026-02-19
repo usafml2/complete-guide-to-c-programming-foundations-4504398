@@ -6,8 +6,10 @@ int main()
 	int x;
 
 	for(x=0;x<5;x++)
-		printf("%c\n",*(*(veeps+x)+1));
-
+		printf("%c\n",*(*(veeps+x)+1)); // prints the second letter of each name
+		// the above statement is equivalent to:
+		// printf("%c\n",veeps[x][1]);
+		 
 	return(0);
 }
 
