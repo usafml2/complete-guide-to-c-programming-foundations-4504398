@@ -25,7 +25,12 @@ int main()
 	// is 26 to represent each letter of the alphabet
 	for (int i = 0; i < 26; i++)
 	{
-		arrayOfPointers[i] = malloc(sizeof(struct firstStructure)); 
+		arrayOfPointers[i] = malloc(sizeof(struct firstStructure));
+		if (arrayOfPointers[i] == NULL)
+		{
+			puts("Memory allocation error");
+			exit(1);
+		}
 		// Allocate memory for each pointer in the array
 		arrayOfPointers[i]->value = i;
 		// Assign values to the members of each structure through the pointers
@@ -37,7 +42,9 @@ int main()
 	{
 		printf("Value: %d, Letter: %c\n", arrayOfPointers[i]->value, arrayOfPointers[i]->letter);
 	}
-
+  // Release memory allocated for each pointer
+	// in the array using a for loop
+	// to iterate through the array and free each pointer
 	for (int i = 0; i < 26; i++)
 	{
 		free(arrayOfPointers[i]);
