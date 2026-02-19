@@ -19,8 +19,8 @@ int main()
 	{
 		int value;
 		char letter;
-	}
-	*arrayOfPointers[26]; // Array of pointers to the structure
+	} *arrayOfPointers[26];
+	 // Array of pointers to the structure
   // Assigned to the structure type, and the size of the array
 	// is 26 to represent each letter of the alphabet
 	for (int i = 0; i < 26; i++)
