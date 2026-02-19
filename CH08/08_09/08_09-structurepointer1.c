@@ -4,10 +4,10 @@
 
 int main()
 {
-	struct person {
-		char *name;
-		int age;
-	} you;
+	struct person { // define a structure type named person
+		char *name; // name is a pointer to char (string)
+		int age; 
+	} you; // you is a structure variable of type struct person
 
 	/* allocate storage */
 	you.name = malloc( sizeof(char) * 32);
