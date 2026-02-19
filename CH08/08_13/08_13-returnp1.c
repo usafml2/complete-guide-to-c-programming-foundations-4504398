@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *allocate(int size) // function prototype
+char *allocate(size_t size) // function prototype
 // function type is character * (pointer to character data)
-// size is the parameter of type int (integer) bytes to allocate.
+// size is the parameter of type size_t (integer) bytes to allocate.
 {
 	char *p; // declare a pointer to character data
 
