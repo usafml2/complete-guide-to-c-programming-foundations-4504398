@@ -13,7 +13,8 @@ char *get_input(size_t size) // function to get input from the user
 {
   char *input = malloc(size); // allocate memory for the input buffer
   //*input , not input, because we want to modify the input buffer directly,
-  // not the pointer to the input buffer.
+  // not the pointer to the input buffer. // * dereference the pointer to the
+  // input buffer to get the input buffer itself, not the pointer to the input buffer
   if (input == NULL) // check if memory allocation was successful
   {
     fprintf(stderr, "Memory allocation failed.\n"); // print error message to stderr
@@ -28,7 +29,9 @@ char *get_input(size_t size) // function to get input from the user
   }
   return input; // return the pointer to the input buffer. input and not *input
                 // because we want to return the pointer to the input buffer,
-                // not the value of the input buffer
+                // not the value of the input buffer. Also, function is declared to
+                // return a pointer to a char, so we need to return a pointer to a char
+                // not a char.
 }
 
 int main()
