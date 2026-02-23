@@ -6,7 +6,10 @@
 
 // write the get_input() function here
 char *get_input(size_t size) // function to get input from the user
-// and return a pointer to the input buffer
+// and return a pointer to the input buffer. size_t is an unsigned 
+// integer type that is used to represent the size of an object in bytes.
+// It is defined in the <stddef.h> header file and is commonly used for
+// memory allocation and array indexing.
 {
   char *input = malloc(size); // allocate memory for the input buffer
   //*input , not input, because we want to modify the input buffer directly,
