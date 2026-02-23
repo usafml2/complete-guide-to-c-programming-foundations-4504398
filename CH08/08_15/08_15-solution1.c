@@ -3,11 +3,13 @@
 
 char *get_input(int size)
 {
-	char *a;
+	char *a; // pointer to store the input string
 	int x = 0;
 
 	/* allocate storage */
-	a = malloc( sizeof(char) * size );
+	a = malloc( sizeof(char) * size ); // allocate memory for the input string
+	// a instead of *a because we want to store the pointer to the input string,
+	// not the value of the input string
 	if( a==NULL )
 	{
 		puts("Unable to allocate memory");
@@ -17,7 +19,11 @@ char *get_input(int size)
 	/* read input */
 	fgets(a,size,stdin);
 	/* remove newline */
-	while( *(a+x) != '\0' )
+	while( *(a+x) != '\0' ) // loop through the input string until we reach the null terminator
+	// *(a+x) instead of (a+x) because we want to access the value of the input string,
+	// not the pointer to the input string. Is it dereferncing the pointer? 
+	// Yes, it is dereferencing the pointer to access the value of the input
+	// string at the current index x.
 	{
 		if( *(a+x)=='\n' )
 		{
