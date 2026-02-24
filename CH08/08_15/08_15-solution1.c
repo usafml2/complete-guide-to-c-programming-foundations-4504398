@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *get_input(int size)
+char *get_input(int size) // function to read input from the user
+// and return a pointer to the input string.
 {
 	char *a; // pointer to store the input string
 	int x = 0;
@@ -12,8 +13,9 @@ char *get_input(int size)
 	// not the value of the input string
 	if( a==NULL )
 	{
-		puts("Unable to allocate memory");
-		exit(1);
+		puts("Unable to allocate memory"); // if malloc fails to allocate memory,
+		// print an error message and exit the program.
+		exit(1); // exit the program with a non-zero status to indicate an error.
 	}
 
 	/* read input */
@@ -25,29 +27,39 @@ char *get_input(int size)
 	// Yes, it is dereferencing the pointer to access the value of the input
 	// string at the current index x.
 	{
-		if( *(a+x)=='\n' )
+		if( *(a+x)=='\n' ) // if we find a newline character, replace it with a null terminator.
+		// *(a+x) not (a+x) because we want to access the value of the input string at the
+		//  current index x, not the pointer to the input string at the current index x.
+		// Is it dereferencing the pointer? Yes, it is dereferencing the pointer
+		// to access the value of the input string at the current index x.
 		{
-			*(a+x) = '\0';
-			break;
+			*(a+x) = '\0'; // replace the newline character with a null terminator
+			// to end the string
+			break;// break out of the loop since we have reached the end of the string
+			
 		}
-		x++;
+		x++; // increment x to move to the next character in the input string
 	}
 
-	return(a);
+	return(a); // return the pointer to the input string
 }
 
 int main()
 {
-	char *your_name,*your_city;
+	char *your_name,*your_city; // pointers to store the input strings for name and city
 
-	printf("Your name: ");
-	your_name = get_input(32);
-	printf("Your city: ");
-	your_city = get_input(32);
+	printf("Your name: "); // prompt the user for their name
+	your_name = get_input(32); // call the get_input function to read the user's
+	// name and store it in the your_name pointer
+	printf("Your city: "); // prompt the user for their city
+	your_city = get_input(32); // call the get_input function
+	// to read the user's city and store it in the
+	//  your_city pointer.
 
 	printf("%s lives in %s.\n",your_name,your_city);
 
 	free(your_name);
 	free(your_city);
+	
 	return 0;
 }
