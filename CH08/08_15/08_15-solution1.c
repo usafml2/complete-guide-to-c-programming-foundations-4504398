@@ -1,5 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> // include the standard input/output header
+// for printf and fgets functions
+#include <stdlib.h> // include the standard library header
+// for memory allocation functions
 
 char *get_input(int size) // function to read input from the user
 // and return a pointer to the input string.
@@ -60,6 +62,6 @@ int main()
 
 	free(your_name);
 	free(your_city);
-	
+
 	return 0;
 }
