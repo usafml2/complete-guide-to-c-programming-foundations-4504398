@@ -23,7 +23,8 @@ char *get_input(int size) // function to read input from the user
 	/* read input */
 	fgets(a,size,stdin);
 	/* remove newline */
-	while( *(a+x) != '\0' ) // loop through the input string until we reach the null terminator
+	while( *(a+x) != '\0' ) // loop through the input string
+	//  until we reach the null terminator.
 	// *(a+x) instead of (a+x) because we want to access the value of the input string,
 	// not the pointer to the input string. Is it dereferncing the pointer? 
 	// Yes, it is dereferencing the pointer to access the value of the input
