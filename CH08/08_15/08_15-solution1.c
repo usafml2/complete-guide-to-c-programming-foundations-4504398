@@ -60,8 +60,11 @@ int main()
 
 	printf("%s lives in %s.\n",your_name,your_city);
 
-	free(your_name);
-	free(your_city);
+	free(your_name); // free the memory allocated for the
+	// your_name string to avoid memory leaks. your_name not *your_name
+	// because we want to free the memory allocated for the input string,
+	free(your_city); // free the memory allocated for the your_city
+	//string to avoid memory leaks. your_city not *your_city
 
 	return 0;
 }
