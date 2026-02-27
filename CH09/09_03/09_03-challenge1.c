@@ -24,10 +24,11 @@ int main()
 	scanf("%s", name); // Read the user's name from the console input and
 	// store it in the name variable. Whitespace characters are not
 	// allowed in the name.
+	FILE *file; // FILE is a typedef for a structure that represents a file stream.
 
-	FILE *file = fopen(filename, "w"); // Open the file for writing.
-	// FILE is a typedef for a structure that represents a file stream.
-	// Open the file for writing.
+	file = fopen(filename, "w"); // Open the file for writing.
+	// fopen is a standard library function that opens a file
+	// and returns a pointer to a FILE object.
 	if (file == NULL) // Check if the file was opened successfully.
 	{
 		printf("Error opening file for writing.\n");
