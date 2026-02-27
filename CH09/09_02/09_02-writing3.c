@@ -13,7 +13,7 @@ int main()
 	}
 
 	/* output */
-	fputc('\n',fh);
+	fputc('\n',fh); // add a newline before appending
 
 	/* close the file */
 	fclose(fh);
