@@ -17,13 +17,17 @@
 int main()
 {
 	const char filename[] = "hello.txt"; // Define a constant character
-	// array to hold the filename.
+	// array to hold the filename. filename is not a keyword.
 
 	printf("Enter your name: ");
 	char name[100]; // Declare a character array to hold the user's name.
-	scanf("%s", name);
+	scanf("%s", name); // Read the user's name from the console input and
+	// store it in the name variable. Whitespace characters are not
+	// allowed in the name.
 
 	FILE *file = fopen(filename, "w"); // Open the file for writing.
+	// FILE is a typedef for a structure that represents a file stream.
+	// Open the file for writing.
 	if (file == NULL) // Check if the file was opened successfully.
 	{
 		printf("Error opening file for writing.\n");
@@ -31,7 +35,8 @@ int main()
 	}
 
 	fprintf(file, "%s\n", name); // Write the user's name to the file.
-	// fprintf is used to format the output to the file.
+	// fprintf is used to format the output to the file. file is the file pointer,
+	// "%s\n" is the format string, and name is the variable to be written.
 	printf("%s has written to %s file\n", name, filename); // Output a message
 	// indicating that the name has been written to the file.
 	
