@@ -44,6 +44,28 @@ int main()
 	}
 
 	/* read records from back to front */
+	for(  int x = 9; x >= 0; x-- )
+	{
+		fseek(fp, x * sizeof(struct person), SEEK_SET);// move the file position 
+		// indicator to the correct record. x * sizeof(struct person) gives the
+		// offset in bytes to the x-th record in the file. fp is the file pointer,
+		// and SEEK_SET indicates that the offset is from the beginning of the file.
+		
+		fread(&presidents[x], sizeof(struct person), 1, fp); // read the record from
+		// the file into the presidents array at index x. &presidents[x] is the
+		// address of the x-th element in the presidents array,
+		// sizeof(struct person) is the size of one record,
+		// and 1 indicates that we want to read one record.
+		// fp is the file pointer.
+
+
+			printf("%s was inaugurated in %d at the age of %d\n",
+			presidents[x].name,
+			presidents[x].inaguration,
+			presidents[x].age);
+	}
+
+
 
 	/* clean-up */
 	fclose(fp);
