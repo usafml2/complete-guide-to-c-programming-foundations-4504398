@@ -48,9 +48,13 @@ int main()
 	{
 		fseek(fp, x * sizeof(struct person), SEEK_SET);// move the file position 
 		// indicator to the correct record. x * sizeof(struct person) gives the
-		// offset in bytes to the x-th record in the file. fp is the file pointer,
+		// offset in bytes to the x-th record in the file. x * is used as the
+		// index of the record we want to read. sizeof(struct person) gives
+		// the size of one record in bytes. * is used as the multiplication 
+		// operator to calculate the total offset in bytes.
+		// fp is the file pointer,
 		// and SEEK_SET indicates that the offset is from the beginning of the file.
-		
+
 		fread(&presidents[x], sizeof(struct person), 1, fp); // read the record from
 		// the file into the presidents array at index x. &presidents[x] is the
 		// address of the x-th element in the presidents array,
