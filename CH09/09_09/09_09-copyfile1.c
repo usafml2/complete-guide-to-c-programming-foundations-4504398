@@ -1,8 +1,11 @@
 #include <stdio.h>
 
 int filecopy(char *org,char *dup) // copy a file
+// *org and *dup are pointers to the original and duplicate file names
 {
-	FILE *o,*d; // original and duplicate file pointers
+	FILE *o,*d; // original and duplicate file pointers.
+	// FILE is a structure type defined in stdio.h that
+	// contains information about a file.
 	int c; // character read from the original file
 
 	/* open/create the files */
@@ -27,18 +30,31 @@ int filecopy(char *org,char *dup) // copy a file
 	}
 
 	/* clean-up */
-	fclose(o);
-	fclose(d);
+	fclose(o); // close the original file
+	fclose(d); // close the duplicate file
+
 	return(0);
 }
 
 int main()
 {
-	char original[] = "beta.txt";
-	char duplicate[] = "betacopy.txt";
-	int r;
+	char original[] = "beta.txt"; // original file name. Must be character array,
+	// not a pointer to a string literal.
+	char duplicate[] = "betacopy.txt"; // duplicate file name. 
+	// Must be character array, not a pointer to a string literal.
 
-	r = filecopy(original,duplicate);
+	int r; // return value from filecopy()
+
+	r = filecopy(original,duplicate); // copy the file
+	// call the filecopy() function to copy the original
+	// file to the duplicate file. It is outside the scope of main()
+	// so it can be used in other files as well.
+	// Because orginal and duplicte are arrays,
+	// they are automatically converted to pointers
+	// when passed to the function. Original and duplicate are arguments
+	// to the function filecopy() and org and dup are parameters to the function.
+	// They are passed by value, but the value is a pointer
+	// to the first element of the array.
 	if( r==-1 )
 		puts("Unable to copy files");
 	else
