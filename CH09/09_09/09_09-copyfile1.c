@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-int filecopy(char *org,char *dup)
+int filecopy(char *org,char *dup) // copy a file
 {
-	FILE *o,*d;
-	int c;
+	FILE *o,*d; // original and duplicate file pointers
+	int c; // character read from the original file
 
 	/* open/create the files */
-	o = fopen(org,"r");
-	d = fopen(dup,"w");
-	if( org==NULL || dup==NULL)
+	o = fopen(org,"r"); // open the original file for reading
+	d = fopen(dup,"w"); // create the duplicate file for writing
+	if( org==NULL || dup==NULL) // check if the files were opened successfully
 	{
 		return(-1);
 	}
@@ -16,10 +16,14 @@ int filecopy(char *org,char *dup)
 	/* read/write to copy the file */
 	while(1)
 	{
-		c = fgetc(o);
+		c = fgetc(o); // read a character c from the original file
 		if( c == EOF )
 			break;
-		fputc(c,d);
+		fputc(c,d); // write the character c to the duplicate file.
+		// c is automatically promoted to an int by fputc().
+		// Also c is automatically demoted to a char by fgetc()
+		// when it is read from the original file.
+		// d is a pointer to the duplicate file.
 	}
 
 	/* clean-up */
