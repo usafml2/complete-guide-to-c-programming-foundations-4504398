@@ -3,9 +3,11 @@
 
 int main()
 {
-	char path[512];
+	char path[512]; // buffer to hold the current
+	// working directory path.
 
-	getcwd(path,512);
+	getcwd(path,512); // get the current working directory path.
+	
 	printf("This program is running in the %s directory\n",path);
 
 	return(0);
