@@ -21,7 +21,7 @@ int filecopy(char *org,char *dup) // copy a file
 	{
 		c = fgetc(o); // read a character c from the original file
 		if( c == EOF )
-			break;
+			break; // if c is EOF, break the loop
 		fputc(c,d); // write the character c to the duplicate file.
 		// c is automatically promoted to an int by fputc().
 		// Also c is automatically demoted to a char by fgetc()
