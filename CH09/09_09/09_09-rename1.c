@@ -4,7 +4,7 @@ int main()
 {
 	int r;
 
-	r = rename("alpha.txt","a.txt");
+	r = rename("alpha.txt","a.txt"); // rename alpha.txt to a.txt
 	if( r == 0 )
 		puts("Rename operation successful");
 	else
