@@ -43,6 +43,7 @@ int main()
 		// and stores it in the structure. &fstat is a pointer to the stat structure.
 		// file->d_name is a string. d_name is a member of the dirent structure
 		// that contains the name of the file.
+		
 		if (S_ISDIR(fstat.st_mode)) //This condition uses the S_ISDIR() macro
 		// to check the st_mode field of a stat structure(named fstat).
 		// The st_mode field contains information about the file type 
