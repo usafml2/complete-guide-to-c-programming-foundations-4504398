@@ -24,7 +24,7 @@ int main()
 	// The dirent structure is defined in dirent.h.
 	// It contains the name of the file in the d_name member.
 	// The stat structure is defined in sys/stat.h.
-	// It contains information about the file,
+	// It contains information about the file.
 
 	/* open the directory */
 	directory = opendir(".");
