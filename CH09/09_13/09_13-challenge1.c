@@ -33,7 +33,7 @@ void read_file(const char *f)
 	{
 		printf("Unable to read from file %s\n", f);
 	}
-	puts("The file has been read.");
+	puts("The file has been opened and read.");
   puts("The file output is ");
 
 	while (1)
@@ -50,9 +50,21 @@ void read_file(const char *f)
 	puts("Now the read file stuff.dat has been closed");
 }
 
-//void delete_file(const char *f)
-//{
-//}
+void delete_file(const char *f)
+{
+	int status;
+
+	status = unlink(f);
+
+	if (status == 0)
+	{
+		printf("File %s unlinked successfully. That is deleted.\n", f);
+	}
+	else
+	{
+		perror("Error unlinking file");
+	}
+}
 
 int main()
 {
@@ -60,7 +72,7 @@ int main()
 
 	create_file(filename);
 	read_file(filename);
-	//delete_file(filename);
+	delete_file(filename);
 
 	return 0;
 }
