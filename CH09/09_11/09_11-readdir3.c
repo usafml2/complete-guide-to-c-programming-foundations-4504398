@@ -1,13 +1,23 @@
 #include <stdio.h>
-#include <dirent.h>
+#include <dirent.h> // include the dirent.h header file, which contains the definitions
+// for the DIR type and the readdir() function.
 
 int main()
 {
-	DIR *directory;
-	struct dirent *file;
+	DIR *directory; // pointer to a directory stream
+	// DIR is a type that represents a directory stream.
+	// It is used to read the contents of a directory.
+	// * is used to declare a pointer to a directory stream.
+
+	struct dirent *file; // pointer to a dirent structure
+	// struct dirent is a structure that represents a directory entry.
+	// *file is a pointer to a dirent structure.
+	// It is used to represent a directory entry.
 
 	/* open the directory */
-	directory = opendir(".");
+	directory = opendir("."); // open the current directory (".")
+	// and return a pointer to a directory stream.
+
 	if( directory == NULL )
 	{
 		puts("Unable to open current directory");
@@ -25,7 +35,10 @@ int main()
 	// including the name of the file or directory (d_name).
 
 		printf("Found the file %s\n",file->d_name); // print the name
-		// of the file or directory. 
+		// of the file or directory. file->d_name is a member of the dirent structure that contains
+		// the name of the file or directory. file is a pointer to a dirent structure,
+		// and d_name is a member of that structure. file.d_name won't work
+		// because file is a pointer, not a structure.
 
 	/* close the directory */
 	closedir(directory);
