@@ -11,7 +11,10 @@ int main()
 	// It is used to represent a directory entry.
 
 	/* open the directory */
-	directory = opendir(".");
+	directory = opendir("."); // open the current directory.
+	// The opendir() function returns a pointer to a DIR
+	// structure that represents the directory stream.
+	// The "." argument specifies the current directory.
 	if( directory == NULL )
 	{
 		puts("Unable to open current directory");
