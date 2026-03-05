@@ -38,17 +38,37 @@ int main()
 	printf("%-5s %-20s %-10s %s\n","Type","Filename","Size","Timestamp");
 	while( (file=readdir(directory)) != NULL )
 	{
-		stat(file->d_name,&fstat);
-		if( S_ISDIR(fstat.st_mode) )
-			printf(" Dir ");
-		else
-			printf("File ");
-		printf("%20s %10ld ",
-				file->d_name,
-				fstat.st_size
-			  );
-		printf("%s",ctime(&fstat.st_mtime));
+		stat(file->d_name, &fstat); // get file information. stat() is a system call
+		// that retrieves information about the file specified by filename
+		// and stores it in the structure. &fstat is a pointer to the stat structure.
+		// file->d_name is a string. d_name is a member of the dirent structure
+		// that contains the name of the file.
+		if (S_ISDIR(fstat.st_mode)) //This condition uses the S_ISDIR() macro
+		// to check the st_mode field of a stat structure(named fstat).
+		// The st_mode field contains information about the file type 
+		// and permissions.S_ISDIR(fstat.st_mode) evaluates to a non
+		// - zero(true) value if the file is a directory, and zero(false)
+		// otherwise.
+		printf(" Dir ");
+		else printf("File ");
+		printf("%20s %10ld ", // print the file size and last modification time.
+					 // %110ld is a format specifier for a long int. fstat.st_size is
+					 // a long int. %20s is a format specifier for a string.
+
+					 file->d_name, // file->d_name is a string. 20 is the minimum width of the string.
+					 // If the string is shorter than 20 characters, it will be padded
+					 // with spaces on the left. If the string is longer than 25
+					 // characters, it will be printed as is.
+
+					 fstat.st_size); // fstat.st_size is the size of the file in bytes.
+													 // It is a long int
+
+		printf("%s", ctime(&fstat.st_mtime)); // fstat.st_mtime is the last
+		// modification time of the file. It is a time_t type.
+		// ctime() is a function that converts a time_t value
+		// to a string
 	}
+	
 
 	/* close the directory */
 	closedir(directory);
