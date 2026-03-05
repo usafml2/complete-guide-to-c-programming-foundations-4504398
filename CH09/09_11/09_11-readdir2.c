@@ -22,7 +22,10 @@ int main()
 	}
 
 	/* do something */
-	file = readdir(directory); // read the first entry in the directory stream.
+	file = readdir(directory);
+	file = readdir(directory); // twice because the first entry is "."
+	// and the second entry is "..". This is not exactly what the instructor has.
+	//file = readdir(directory); // read the first entry in the directory stream.
 	// readdir() returns a pointer to a dirent structure that represents the
 	// next entry in the directory stream. file is a pointer to a dirent
 	// structure that represents the first entry in the directory stream.
