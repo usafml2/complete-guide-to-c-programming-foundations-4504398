@@ -33,6 +33,7 @@ void read_file(const char *f)
 	{
 		printf("Unable to read from file %s\n", f);
 	}
+	puts("The file has been read.");
   puts("The file output is ");
 
 	while (1)
@@ -46,7 +47,7 @@ void read_file(const char *f)
   
 	/* clean-up */
 	fclose(fh);
-	
+	puts("Now the read file stuff.dat has been closed");
 }
 
 //void delete_file(const char *f)
