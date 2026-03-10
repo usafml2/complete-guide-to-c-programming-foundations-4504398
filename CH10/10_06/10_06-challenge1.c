@@ -10,6 +10,7 @@ int compare(const void *a, const void *b)
 int main()
 {
 	// seed the randomizer
+	srand((unsigned)time(NULL));
 	// allocate storage
 	// populate the grid with random values, 0 through 99
 	// quicksort the grid
