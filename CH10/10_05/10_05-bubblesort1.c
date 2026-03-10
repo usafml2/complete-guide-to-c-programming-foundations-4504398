@@ -39,7 +39,7 @@ int main()
 	/* display the sorted list */
 	printf("%d random values, sorted:\n",SIZE);
 	for(a=0;a<SIZE;a++)
-		printf("%4d",list[a]);
+		printf("%4d\n",list[a]);
 	putchar('\n');
 
 	return(0);
