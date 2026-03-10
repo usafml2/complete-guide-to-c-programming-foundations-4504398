@@ -31,6 +31,7 @@ int main()
 
 	/* quicksort the grid */
 	qsort(grid,gsize,sizeof(int),compare);
+  printf("The size of int is: %d bytes\n",sizeof(int));
 
 	/* output the grid */
 	for( x=0; x<grow; x++ )
